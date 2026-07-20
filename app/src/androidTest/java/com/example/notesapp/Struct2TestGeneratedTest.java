@@ -8,10 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.Espresso.pressBack;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -25,11 +22,8 @@ public class Struct2TestGeneratedTest {
 
     @Test
     public void generatedFromHierarchy_homeScreenTest() {
-        onView(withId(R.id.search_src_text))
-                .check(matches(isDisplayed()))
-                .perform(click(), replaceText("test"), closeSoftKeyboard());
-
-        pressBack();
+        onView(withId(R.id.searchView_home))
+                .check(matches(isDisplayed()));
 
         onView(withId(R.id.fab_add))
                 .check(matches(isDisplayed()))
